@@ -2,7 +2,7 @@ const sonarqubeScanner = require("sonarqube-scanner");
 sonarqubeScanner(
   {
     serverUrl: "https://sonarqube.ct.blue.cdtapps.com",
-    token: "ada045feefa7978777074d1326b8ade8aee9fa7c",
+    token: "",
     options: {
      "sonar.projectKey": "cweb.cweb-pilot-test",
       "sonar.projectName": "cweb-pilot-test",
