@@ -6,7 +6,7 @@ sonarqubeScanner(
     options: {
      "sonar.projectKey": "cweb.cweb-pilot-test",
       "sonar.projectName": "cweb-pilot-test",
-      "sonar.sources": "./src",
+      "sonar.sources": "./lib",
       "sonar.typescript.lcov.reportPaths": "coverage/lcov.info",
       "sonar.testExecutionReportPaths": "reports/test-report.xml",
     },
