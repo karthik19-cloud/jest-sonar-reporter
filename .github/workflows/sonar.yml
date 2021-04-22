@@ -1,0 +1,45 @@
+# Start by giving a name to your workflow
+name: Sonarqube Analyze
+on:
+  push:
+
+    branches:
+      - develop123
+      
+jobs:
+  sonarQubeTrigger:
+    name: SonarQube Trigger
+    runs-on: ubuntu-latest
+    env:
+       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v1
+    - name: Build
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+        registry-url: 'https://registry.npmjs.org'
+    - run: npm install
+    - run: npm install -g jest
+    - run: npm install -g typescript
+    - run: npm add -D sonarqube-scanner
+    - run: npm add -D jest-sonar-reporter    
+    - run: npm test:coverage
+#     - run: ls -lrt /home/runner/work/cweb-pilot-project/cweb-pilot-project/dist
+#       shell: bash
+#     - run: ls -lrt /home/runner/work/cweb-pilot-project/cweb-pilot-project
+#       shell: bash
+#     - run: ls -lrt reports
+#       shell: bash
+#     - run: cat reports/test-report.xml
+#       shell: bash
+#     - run: ls -lrt /home/runner/work/cweb-pilot-project/cweb-pilot-project/src/reports/jest
+#       shell: bash
+#     - run: ls -lrt /home/runner/work/cweb-pilot-project/cweb-pilot-project/src/reports/jest/lcov-report
+#       shell: bash
+#     - run: cat coverage/lcov.info
+#       shell: bash
+    - run: npm run-script sonar         
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
