@@ -1,5 +1,5 @@
 {
-  "name": "jest-sonar-reporter",
+  "name": "jest-sonar-reporter-test",
   "version": "2.0.0",
   "description": "A Sonar test reporter for Jest.",
   "keywords": [
