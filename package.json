@@ -11,10 +11,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf reports* coverage",
-    "test": "jest",
+    "clean": "rimraf reports* coverage",    
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test": "jest --coverage",
     "sonar": "node sonar-project.js",
     "test:debug": "DEBUG=true jest",
     "preversion": "npm run clean && npm run test:coverage",
