@@ -22,8 +22,8 @@ jobs:
     - run: npm install
     - run: npm install -g jest
     - run: npm install -g typescript
-    - run: npm add -D sonarqube-scanner
-    - run: npm add -D jest-sonar-reporter    
+    - run: npm i sonarqube-scanner
+    - run: npm i jest-sonar-reporter    
     - run: npm test:coverage
 #     - run: ls -lrt /home/runner/work/cweb-pilot-project/cweb-pilot-project/dist
 #       shell: bash
