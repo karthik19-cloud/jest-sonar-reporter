@@ -2,9 +2,8 @@
 name: Sonarqube Analyze
 on:
   push:
-
     branches:
-      - develop123
+      - develop
       
 jobs:
   sonarQubeTrigger:
