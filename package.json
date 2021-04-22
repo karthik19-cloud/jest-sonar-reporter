@@ -43,11 +43,11 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "testResultsProcessor": "<rootDir>/index.js"
+    "testResultsProcessor": "jest-sonar-reporter"
   },
   "jestSonar": {
     "reportPath": "reports",
-    "reportFile": "test-report.xml",
+    "reportFile": "test-reporter.xml",
     "indent": 4
   }
 }
