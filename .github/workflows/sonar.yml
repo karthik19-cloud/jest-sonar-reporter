@@ -3,7 +3,7 @@ name: Sonarqube Analyze
 on:
   push:
     branches:
-      - develop
+      - develop12
       
 jobs:
   sonarQubeTrigger:
@@ -24,7 +24,7 @@ jobs:
     - run: npm install -g typescript
     - run: npm i sonarqube-scanner
     - run: npm i -D jest-sonar-reporter    
-    - run: npm test:coverage
+    - run: npm test
 #     - run: ls -lrt /home/runner/work/cweb-pilot-project/cweb-pilot-project/dist
 #       shell: bash
 #     - run: ls -lrt /home/runner/work/cweb-pilot-project/cweb-pilot-project
